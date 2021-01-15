@@ -143,4 +143,4 @@ See below for a more complete example
 ```
 
 ## Code
-    Parts of Lora.c code borrows from RadioHead library but it has been rewritten in C to integrate easier with TI projects.
+Parts of Lora.c code borrows from RadioHead library but it has been rewritten in C to integrate easier with TI projects.

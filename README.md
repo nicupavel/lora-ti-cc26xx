@@ -3,7 +3,7 @@ A LoRa library for SemTech LoRa (or compatible RFM95, HopeRF, etc) chips  workin
 for sending sensor data like temperature, humidity, etc via LoRa. 
 
 ## Integrating into TI CCS projects
-    The references below to *simple_peripheral* considers a project started from TI BLE Simple Peripheral Example.
+The references below to *simple_peripheral* considers a project started from TI BLE Simple Peripheral Example.
 
 1. Configure LoRa chip SPI pins
 Open simple_peripheral.syscfg in Code Composer Studio and on TI Drivers > SPI > Add a new entry for your LoRa Chip. Call this ```CONFIG_SPI_LORA```. 

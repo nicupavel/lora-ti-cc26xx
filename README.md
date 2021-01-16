@@ -98,6 +98,10 @@ In your *SimplePeripheral_processAppMsg(...)* function add a case for LoRa messa
       break;
 ```
 
+6. Add clock_gettime() dependency
+
+Edit your project *_app.cfg and add ```xdc.useModule('ti.sysbios.posix.Settings');```
+
 ## Using library
 
 1. Set internal chip registers to default:  Lora_reset() 

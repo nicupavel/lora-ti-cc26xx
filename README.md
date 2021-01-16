@@ -107,7 +107,7 @@ In your *SimplePeripheral_processAppMsg(...)* function add a case for LoRa messa
 
 ## Using sensor data packets
 
-LoraPacket.c uses a custom protocol to send data. See protocol [description](docs/LoraSensorsProtocol.html).
+LoraPacket.c uses a custom protocol to send data. See protocol [description](https://nicupavel.github.io/lora-ti-cc26xx/).
 
 1. Create a new packet: ```lora_packet_t *packet = lora_packet_new(uid, MODE)```
 2. Put data into packet: ```lora_packet_put_datatype(packet, TYPE, VALUE)```

@@ -7,13 +7,13 @@ The references below to *simple_peripheral* considers a project started from TI 
 
 1. Configure LoRa chip SPI pins
 Open simple_peripheral.syscfg in Code Composer Studio and on TI Drivers > SPI > Add a new entry for your LoRa Chip. Call this ```CONFIG_SPI_LORA```. 
-Configure the SPI pins, example in the screenshot below
+Configure the SPI pins, example in the [screenshot](https://github.com/nicupavel/lora-ti-cc26xx/blob/master/docs/syscfg-lora-spi.PNG).
 
 2. Configure LoRa chip GPIO pins (RESET and IRQ)
 Open simple_peripheral.syscfg in Code Composer Studio and on TI Drivers > GPIO > Add 2 new entries for RESET and IRQ: ```CONFIG_GPIO_LORA_RST``` and ```CONFIG_GPIO_LORA_IRQ```
 The PIN MUX should correspond to where you connected the RESET and IRQ pins from LoRa chip to your MCU. The IRQ pin on LoRa Chip is **DIO_0** in mapping mode 00 + packet mode. Consult chip datasheet.
 
-**Important**:  For ```CONFIG_GPIO_LORA_IRQ``` at *Callback Function* configuration for GPIO write *Lora_Callback*. This function exists in Lora.c and handles the IRQ. Example in screenshot below.
+**Important**:  For ```CONFIG_GPIO_LORA_IRQ``` at *Callback Function* configuration for GPIO write *Lora_Callback*. This function exists in Lora.c and handles the IRQ. Example in [IRQ screenshot](https://github.com/nicupavel/lora-ti-cc26xx/blob/master/docs/syscfg-lora-irq.PNG), [RESET screenshot](https://github.com/nicupavel/lora-ti-cc26xx/blob/master/docs/syscfg-lora-rst.PNG).
 
 3. Add SPI code that handles SPI communication
 Add the SPI/ folder to your CCS project. You can use your own SPI implementation but Lora.c uses SPI_TxRx() function to write/read from SPI and buffers as defined in the working SPIDriver.c example. 
